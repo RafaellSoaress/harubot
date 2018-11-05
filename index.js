@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const harubot = new Discord.Client();
 
-const config = require('./config/config.js');
+const config  = require('./config/config.js');
 
 const auth_config = config.auth;
 const haru_config = config.haru;
