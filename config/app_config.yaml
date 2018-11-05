@@ -1,0 +1,9 @@
+auth:
+  token: "NTA4Njg2Mzg5Mzk5NzgxNDAy.DsIkVg.7mUIAWOgD99UpJKT4fN5C2yZ8F8"
+
+haru:
+  prefix: "~"
+
+activities:
+  league_of_legends : 'League of Legends'
+  fortnite          : 'Fornite'
