@@ -7,7 +7,7 @@ const auth_config = config.auth;
 const haru_config = config.haru;
 const activities  = config.activities;
 
-const ajuda = require('./eventos/ajuda.js')
+const ajuda = require('./eventos/ajuda.js');
 
 //saber se ela logou mesmo
 harubot.on('ready', () => {
@@ -19,7 +19,7 @@ harubot.on('ready', () => {
 harubot.on('message', message => {
 
   if(message.content === haru_config.prefix + "ajuda") {
-    message.channel.reply(pedidoAjuda);
+    pedidoAjuda;
   }
 
 
