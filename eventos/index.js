@@ -1,7 +1,12 @@
+const { messages } = require('../config/config.js');
+
 module.exports = {
 
   ajuda: (message) => {
-    return message.reply('olá, irei passar uma lista de comandos para você !');
+    message.reply('Olá, irei passar uma lista de comandos para você !');
+    message.author.send(messages.help.private);
+
+    return 1;
   },
 
   ready: async (client) => {
