@@ -1,3 +1,5 @@
+const { haru: haru_config } = require('../config/config.js');
+
 Array.prototype.getPrefix = function() {
   return this.map(item => "~" + item);
 }
