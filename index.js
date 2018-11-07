@@ -75,6 +75,6 @@ harubot.on('message', message => {
 
 /*
   Conexão da Harubot no canal utilizando
-  o token como credencial
+  o token como credencial.
 */
 harubot.login(auth_config.token);
