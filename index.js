@@ -69,7 +69,7 @@ harubot.on('message', message => {
       }
 
     }
-  }
+  })
 
 });
 
