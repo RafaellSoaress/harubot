@@ -1,4 +1,6 @@
+const colors   = require('colors');
 const Discord = require('discord.js');
+
 const harubot = new Discord.Client();
 
 const {
@@ -18,7 +20,7 @@ harubot.on('ready', () => {
 
         ${harubot.user.tag} está logada!
 
-    `);
+    `.cyan);
 })
 
 // interação da bot com o pessoal no canal
