@@ -7,7 +7,9 @@ const auth_config = config.auth;
 const haru_config = config.haru;
 const activities  = config.activities;
 
-const eventos = require('./eventos/index.js');
+const eventos   = require('./eventos/index.js');
+const constants = require('./config/constants.js');
+const utils     = require('./utils/utils.js');
 
 //saber se ela logou mesmo
 harubot.on('ready', () => {
@@ -17,6 +19,19 @@ harubot.on('ready', () => {
 
 // interação da bot com o pessoal no canal
 harubot.on('message', message => {
+
+  constants.palavrasOfensivas.forEach(palavra => {
+
+    const regex = new RegExp(palavra, "gi");
+
+    if(regex.exec(message.content)) {
+
+      message.reply(utils.getRandomResponse(constants.respostas))
+
+      return false;
+
+    }
+  })
 
   if(message.content === haru_config.prefix + "ajuda") {
     eventos.ajuda(message);
