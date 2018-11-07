@@ -19,9 +19,8 @@ harubot.on('ready', () => {
 harubot.on('message', message => {
 
   if(message.content === haru_config.prefix + "ajuda") {
-    eventos.ajuda();
+    eventos.ajuda(message);
   }
-
 
 });
 
