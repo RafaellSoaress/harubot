@@ -1,4 +1,4 @@
-const obj = {
+module.exports = {
 
   palavrasOfensivas: [
     'porra',
@@ -17,12 +17,11 @@ const obj = {
   ],
 
   respostas : [
-    ", não diga algo assim, é feio !",
-    ", que feio, não diga mais algo assim novamente ! ):",
-    ", por favor, não diga mais isso... 3:",
-    ", aaaaa, por que você diz algo tão feio assim ?",
-    ", seu capetinha !"
+    "não diga algo assim, é feio !",
+    "que feio, não diga mais algo assim novamente ! ):",
+    "por favor, não diga mais isso... 3:",
+    "aaaaa, por que você diz algo tão feio assim ?",
+    "seu capetinha !"
   ]
-}
 
-module.exports = obj;
+};
