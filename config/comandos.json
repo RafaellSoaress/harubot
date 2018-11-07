@@ -1,26 +1,26 @@
 {
   "lain": {
       "desc": "Bem... O Lain é otaku, né ?",
-      "nome":  "LainOtaku"
+      "comando":  "lain"
    },
 
    "jap": {
      "desc": "Todo dia é dia de entender o que cada kanji significa !",
-     "nome": "japonga"
+     "comando": "jap"
    },
 
    "chuni": {
      "desc": "Vamos iniciar uma nova aventura juntos ?",
-     "nome": "chuunibiyou"
+     "comando": "chuni"
    },
 
    "motivar": {
      "desc": "Uma boa motivação para o seu dia de luta !",
-     "nome": "motivacao"
+     "comando": "motivar"
    },
 
    "ajuda": {
      "desc": "Envio de lista de comandos no privado.",
-     "nome": "ajuda"
+     "comando": "ajuda"
    }
 }
