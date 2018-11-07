@@ -1,0 +1,3 @@
+help:
+  private: "Teste"
+  channel: "Olá, irei passar uma lista de comandos para você !"
