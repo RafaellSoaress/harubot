@@ -1,11 +1,11 @@
 const Discord = require('discord.js');
 const harubot = new Discord.Client();
 
-const config  = require('./config/config.js');
-
-const auth_config = config.auth;
-const haru_config = config.haru;
-const activities  = config.activities;
+const {
+  auth: auth_config,
+  haru: haru_config,
+  activities
+} = require('./config/config.js');
 
 const eventos   = require('./eventos/index.js');
 const constants = require('./config/constants.js');
@@ -14,7 +14,11 @@ const utils     = require('./utils/utils.js');
 //saber se ela logou mesmo
 harubot.on('ready', () => {
     harubot.user.setActivity(activities.league_of_legends);
-    console.log(`${harubot.user.tag} está logada!`);
+    console.log(`
+
+        ${harubot.user.tag} está logada!
+
+    `);
 })
 
 // interação da bot com o pessoal no canal
