@@ -2,6 +2,10 @@ Array.prototype.getPrefix = function() {
   return this.map(item => "~" + item);
 }
 
+String.prototype.getPrefix = function() {
+  return haru_config.prefix + this;
+}
+
 module.exports = {
 
   getRandomResponse: (responses) => {

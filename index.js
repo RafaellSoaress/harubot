@@ -43,7 +43,7 @@ harubot.on('message', message => {
   })
 
   listaDeComandos.forEach(comando => {
-    if(message.content === haru_config.prefix + comando) {
+    if(message.content === comando.getPrefix()) {
       return eventos[comando](message);
     }
   })
@@ -53,7 +53,6 @@ harubot.on('message', message => {
   // }
 
 });
-
 
 //conexao da harubot no canal
 harubot.login(auth_config.token);
