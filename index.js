@@ -9,6 +9,8 @@ const {
   activities
 } = require('./config/config.js');
 
+const comandos = require('./config/comandos.json');
+
 const eventos   = require('./eventos/index.js');
 const constants = require('./config/constants.js');
 const utils     = require('./utils/utils.js');
@@ -41,6 +43,7 @@ harubot.on('message', message => {
 
   if(message.content === haru_config.prefix + "ajuda") {
     eventos.ajuda(message);
+    message.content.channel(comandos);
   }
 
 });
