@@ -44,7 +44,13 @@ harubot.on('message', message => {
 
   listaDeComandos.forEach(comando => {
     if(message.content === comando.getPrefix()) {
-      return eventos[comando](message);
+
+      // Busca pelo evento relacionado a mensagem
+
+      if(eventos[comando]) {
+        return eventos[comando](message);
+      }
+
     }
   })
 
