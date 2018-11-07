@@ -1,7 +1,7 @@
 module.exports = {
 
-  ajuda: () => {
-    return message.channel.reply(', olá, irei passar uma lista de comandos para você !');
+  ajuda: (message) => {
+    return message.reply('olá, irei passar uma lista de comandos para você !');
   },
 
   ready: async (client) => {
