@@ -1,11 +1,21 @@
-const { haru: haru_config } = require('../config/config.js');
+// const { haru: haru_config } = require('../config/config.js');
+
+const prefix = '~'
 
 Array.prototype.getPrefix = function() {
-  return this.map(item => haru_config.prefix + item);
+  return this.map(item => prefix + item);
 }
 
 String.prototype.getPrefix = function() {
-  return haru_config.prefix + this;
+  return prefix + this;
+}
+
+String.prototype.makeBold = function() {
+  return `__***${this}***__`;
+}
+
+String.prototype.codeBlock = function() {
+  return '```' + this  + '```';
 }
 
 module.exports = {

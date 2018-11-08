@@ -1,16 +1,17 @@
-const { messages } = require('../config/config.js');
+const { help } = require('../config/config.js');
 
 module.exports = {
 
   ajuda: (message) => {
-    message.reply(messages.help.channel);
-    message.author.send(messages.help.lain);
-    message.author.send(messages.help.chuni);
-    message.author.send(messages.help.motiva);
-    message.author.send(messages.help.jap);
-    message.author.send(messages.help.ajuda);
+    message.reply(help.channelMessage);
 
-    return 1;
+    message.author.send(`
+      ${'Lista de Comandos'.codeBlock()}
+
+      
+    `);
+
+    message.author.send(help.privateMessage);
   },
 
   ready: async (client) => {

@@ -11,7 +11,6 @@ module.exports = {
     'buceta',
     'fodido',
     'fodida',
-    'otaku',
     'vai tomar no cu',
     'cu'
   ],

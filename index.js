@@ -36,6 +36,16 @@ harubot.on('ready', () => {
   mensagem é enviada no canal
 */
 
+harubot.on('guildMemberAdd', member => {
+
+  const channel = member.guild.channels.find(ch => ch.name === 'member-log');
+
+  if(!channel) return;
+
+  channel.send(`Seja bem vinda(o), ${member}`)
+
+})
+
 harubot.on('message', message => {
 
   constants.palavrasOfensivas.forEach(palavra => {
