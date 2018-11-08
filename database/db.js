@@ -10,6 +10,6 @@ const db       = new low(adapter);
 const database = new Database(db);
 
 database.setDefaults(defaults);
-// database.loadDefaults(defaults);
+// database.loadDefaults();
 
 module.exports = database;
