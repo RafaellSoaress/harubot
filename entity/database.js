@@ -1,6 +1,6 @@
 class Database {
 
-  constructor(db, df) {
+  constructor(db) {
     this.db = db;
     this.defaults = {};
     this.start();
