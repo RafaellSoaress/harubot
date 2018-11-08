@@ -84,6 +84,15 @@ harubot.on('message', message => {
     }
   })
 
+
+/*
+  passar aqui a estrutura do chuuni
+  quando for chamado o comando "~chuni"
+*/
+
+
+
+
 });
 
 /*
