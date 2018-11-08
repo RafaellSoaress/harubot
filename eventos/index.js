@@ -4,7 +4,11 @@ module.exports = {
 
   ajuda: (message) => {
     message.reply(messages.help.channel);
-    message.author.send(messages.help.private);
+    message.author.send(messages.help.lain);
+    message.author.send(messages.help.chuni);
+    message.author.send(messages.help.motiva);
+    message.author.send(messages.help.jap);
+    message.author.send(messages.help.ajuda);
 
     return 1;
   },
