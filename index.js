@@ -20,7 +20,9 @@ const comandos  = require('./config/comandos.json');
 */
 
 harubot.on('ready', () => {
+
     harubot.user.setActivity(activities.league_of_legends);
+    
     console.log(`
 
         ${harubot.user.tag} está logada!
