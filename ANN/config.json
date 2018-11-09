@@ -1,0 +1,14 @@
+{
+
+  "ANNClasses": {
+    "OFFENSIVE": 1,
+    "NORMAL": 0
+  },
+
+  "trainingTexts": [
+    "texto ofensivo",
+    "texto ofensivo",
+    "texto normal"
+  ]
+
+}

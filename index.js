@@ -14,6 +14,7 @@ const comandos  = require('./config/comandos.json');
 const eventos   = require('./eventos/index.js');
 const utils     = require('./utils/utils.js');
 const db        = require('./database/database.js');
+const ann       = require('./ANN/index.js');
 
 /*
   Listener aguardando para a compleição
