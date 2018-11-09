@@ -1,14 +1,100 @@
 {
-
-  "ANNClasses": {
-    "OFFENSIVE": 1,
-    "NORMAL": 0
-  },
-
-  "trainingTexts": [
-    "texto ofensivo",
-    "texto ofensivo",
-    "texto normal"
-  ]
-
+    "trainingMessages": [
+      {
+        "message": "vai tomar no cu",
+        "classification": "offensive"
+      },
+      {
+        "message": "filho da puta",
+        "classification": "offensive"
+      },
+      {
+        "message": "caralho",
+        "classification": "offensive"
+      },
+      {
+        "message": "porra",
+        "classification": "offensive"
+      },
+      {
+        "message": "arrombado",
+        "classification": "offensive"
+      },
+      {
+        "message": "vai se foder",
+        "classification": "offensive"
+      },
+      {
+        "message": "fodeu",
+        "classification": "offensive"
+      },
+      {
+        "message": "mas que merda é essa?",
+        "classification": "offensive"
+      },
+      {
+        "message": "bom jogo",
+        "classification": "cool"
+      },
+      {
+        "message": "amigável",
+        "classification": "cool"
+      },
+      {
+        "message": "vamos jogar",
+        "classification": "cool"
+      },
+      {
+        "message": "boa partida",
+        "classification": "cool"
+      },
+      {
+        "message": "o que vocês estão fazendo?",
+        "classification": "cool"
+      },
+      {
+        "message": "amigo",
+        "classification": "cool"
+      },
+      {
+        "message": "bom jogo",
+        "classification": "cool"
+      },
+      {
+        "message": "como estão vocês?",
+        "classification": "cool"
+      },
+      {
+        "message": "prazer, meu nome é",
+        "classification": "cool"
+      },
+      {
+        "message": "estou jogando agora",
+        "classification": "cool"
+      },
+      {
+        "message": "to sem nada pra fazer",
+        "classification": "cool"
+      },
+      {
+        "message": "universidade",
+        "classification": "cool"
+      },
+      {
+        "message": "amigos",
+        "classification": "cool"
+      },
+      {
+        "message": "teste",
+        "classification": "cool"
+      },
+      {
+        "message": "foda",
+        "classification": "offensive"
+      },
+      {
+        "message": "fodido",
+        "classification": "offensive"
+      }
+    ]
 }

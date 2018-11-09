@@ -9,12 +9,14 @@ const {
   activities
 } = require('./config/config.js');
 
-const constants = require('./config/constants.js');
-const comandos  = require('./config/comandos.json');
-const eventos   = require('./eventos/index.js');
-const utils     = require('./utils/utils.js');
-const db        = require('./database/database.js');
-const ann       = require('./ANN/index.js');
+const constants  = require('./config/constants.js');
+const comandos   = require('./config/comandos.json');
+const eventos    = require('./eventos/index.js');
+const utils      = require('./utils/utils.js');
+const db         = require('./database/database.js');
+const classifier = require('./ANN/index.js');
+const fs         = require('fs');
+const path       = require('path');
 
 /*
   Listener aguardando para a compleição
@@ -49,23 +51,11 @@ harubot.on('guildMemberAdd', member => {
 
 harubot.on('message', message => {
 
-  constants.palavrasOfensivas.forEach(palavra => {
+  const isOffensive = classifier.categorize(message.content.toLowerCase()).predictedCategory;
 
-    const regex = new RegExp(palavra, "gi");
-
-    if(regex.exec(message.content)) {
-
-      /*
-        Retorna uma das mensagens salvas na lista
-        de respostas nas constantes.
-      */
-
-      message.reply(utils.getRandomResponse(constants.respostas))
-
-      return false;
-
-    }
-  })
+  if(isOffensive === "offensive") {
+    message.reply(utils.getRandomResponse(constants.respostas));
+  }
 
   utils.getListaDeComandos(comandos).forEach(comando => {
     if(comando.getPrefix() === message.content) {
@@ -85,14 +75,14 @@ harubot.on('message', message => {
     }
   })
 
+  classifier.learn(message.content.toLowerCase(), isOffensive);
+  fs.writeFileSync(path.resolve(path.join(__dirname, './ANN/bayes.json')), classifier.toJson());
+
 
 /*
-  passar aqui a estrutura do chuuni
-  quando for chamado o comando "~chuni"
+passar aqui a estrutura do chuuni
+quando for chamado o comando "~chuni"
 */
-
-
-
 
 });
 
