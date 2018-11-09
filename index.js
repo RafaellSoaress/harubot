@@ -13,7 +13,7 @@ const constants = require('./config/constants.js');
 const comandos  = require('./config/comandos.json');
 const eventos   = require('./eventos/index.js');
 const utils     = require('./utils/utils.js');
-const db        = require('./database/db.js');
+const db        = require('./database/database.js');
 
 /*
   Listener aguardando para a compleição
