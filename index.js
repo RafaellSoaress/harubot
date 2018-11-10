@@ -1,10 +1,10 @@
-const ora = require('ora');
+const ora    = require('ora');
+const colors = require('colors');
 
 const spinner = ora();
 
-spinner.start('Carregando as dependências gerais do projeto...');
+spinner.start('Carregando as dependências gerais do projeto...'.yellow);
 
-const colors  = require('colors');
 const Discord = require('discord.js');
 
 const harubot = new Discord.Client();
@@ -20,18 +20,18 @@ const comandos   = require('./config/comandos.json');
 const eventos    = require('./eventos/index.js');
 const utils      = require('./utils/utils.js');
 const db         = require('./database/database.js');
-const classifier = require('./ANN/index.js');
+const haru_ia    = require('./ANN/index.js');
 const fs         = require('fs');
 const path       = require('path');
 
-spinner.succeed('Dependências carregadas com sucesso');
+spinner.succeed('Dependências carregadas com sucesso'.cyan);
 
 /*
   Listener aguardando para a compleição
   dos eventos pré-carregamento.
 */
 
-spinner.start('Aguardando a criação dos listeners...');
+spinner.start('Aguardando a criação dos listeners...'.yellow);
 
 harubot.on('ready', () => {
 
@@ -61,9 +61,11 @@ harubot.on('guildMemberAdd', member => {
 
 harubot.on('message', message => {
 
-  const isOffensive = classifier.categorize(message.content.toLowerCase()).predictedCategory;
+  const messageClassification = haru_ia.run(message.content.toLowerCase());
 
-  if(isOffensive === "offensive") {
+  console.log(messageClassification);
+
+  if(messageClassification === "offensive") {
     message.reply(utils.getRandomResponse(constants.respostas));
   }
 
@@ -90,8 +92,8 @@ harubot.on('message', message => {
 
   })
 
-  classifier.learn(message.content.toLowerCase(), isOffensive);
-  fs.writeFileSync(path.resolve(path.join(__dirname, './ANN/bayes.json')), classifier.toJson());
+  // haru_ia.train([{ input: message.content.toLowerCase(), output: messageClassification }]);
+  // fs.writeFileSync(path.resolve(path.join(__dirname, './ANN/bayes.json')), JSON.stringify(haru_ia.toJSON()));
 
 
 /*
@@ -101,13 +103,13 @@ quando for chamado o comando "~chuni"
 
 });
 
-spinner.succeed('Listeners alocados com sucesso.');
+spinner.succeed('Listeners alocados com sucesso.'.cyan);
 
 /*
   Conexão da Harubot no canal utilizando
   o token como credencial.
 */
 
-spinner.start('Autenticando a aplicação no servidor do Discord.');
+spinner.start('Autenticando a aplicação no servidor do Discord.'.yellow);
 harubot.login(auth_config.token);
-spinner.succeed('Aplicação autenticada com sucesso');
+spinner.succeed('Aplicação autenticada com sucesso'.cyan);
