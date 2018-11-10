@@ -1,4 +1,10 @@
-const colors   = require('colors');
+const ora = require('ora');
+
+const spinner = ora();
+
+spinner.start('Carregando as dependências gerais do projeto...');
+
+const colors  = require('colors');
 const Discord = require('discord.js');
 
 const harubot = new Discord.Client();
@@ -18,10 +24,14 @@ const classifier = require('./ANN/index.js');
 const fs         = require('fs');
 const path       = require('path');
 
+spinner.succeed('Dependências carregadas com sucesso');
+
 /*
   Listener aguardando para a compleição
   dos eventos pré-carregamento.
 */
+
+spinner.start('Aguardando a criação dos listeners...');
 
 harubot.on('ready', () => {
 
@@ -31,7 +41,7 @@ harubot.on('ready', () => {
 
         ${harubot.user.tag} está logada!
 
-    `.yellow);
+    `.green);
 })
 
 /*
@@ -86,9 +96,13 @@ quando for chamado o comando "~chuni"
 
 });
 
+spinner.succeed('Listeners alocados com sucesso.');
+
 /*
   Conexão da Harubot no canal utilizando
   o token como credencial.
 */
 
+spinner.start('Autenticando a aplicação no servidor do Discord.');
 harubot.login(auth_config.token);
+spinner.succeed('Aplicação autenticada com sucesso');

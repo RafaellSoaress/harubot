@@ -15,7 +15,7 @@ if (fs.statSync(intel_path).size == 0) {
   classifier = bayes();
   spinner.succeed('Módulo classificador carregado com sucesso.');
 } else {
-  console.log('Carregando o módulo classificador através de', intel_path);
+  spinner.start('Carregando o módulo classificador através de ' + intel_path);
   const intel = fs.readFileSync(intel_path);
   classifier = bayes.fromJson(JSON.parse(intel));
   spinner.succeed('Módulo classificador carregado com sucesso.');
