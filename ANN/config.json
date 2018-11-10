@@ -1,108 +1,108 @@
 {
     "trainingMessages": [
       {
-        "message": "vai tomar no cu",
-        "classification": "offensive"
+        "input": "vai tomar no cu",
+        "output": "offensive"
       },
       {
-        "message": "filho da puta",
-        "classification": "offensive"
+        "input": "filho da puta",
+        "output": "offensive"
       },
       {
-        "message": "caralho",
-        "classification": "offensive"
+        "input": "caralho",
+        "output": "offensive"
       },
       {
-        "message": "porra",
-        "classification": "offensive"
+        "input": "porra",
+        "output": "offensive"
       },
       {
-        "message": "arrombado",
-        "classification": "offensive"
+        "input": "arrombado",
+        "output": "offensive"
       },
       {
-        "message": "vai se foder",
-        "classification": "offensive"
+        "input": "vai se foder",
+        "output": "offensive"
       },
       {
-        "message": "fodeu",
-        "classification": "offensive"
+        "input": "fodeu",
+        "output": "offensive"
       },
       {
-        "message": "mas que merda é essa?",
-        "classification": "offensive"
+        "input": "mas que merda é essa?",
+        "output": "offensive"
       },
       {
-        "message": "bom jogo",
-        "classification": "cool"
+        "input": "bom jogo",
+        "output": "cool"
       },
       {
-        "message": "amigável",
-        "classification": "cool"
+        "input": "amigável",
+        "output": "cool"
       },
       {
-        "message": "vamos jogar",
-        "classification": "cool"
+        "input": "vamos jogar",
+        "output": "cool"
       },
       {
-        "message": "boa partida",
-        "classification": "cool"
+        "input": "boa partida",
+        "output": "cool"
       },
       {
-        "message": "o que vocês estão fazendo?",
-        "classification": "cool"
+        "input": "o que vocês estão fazendo?",
+        "output": "cool"
       },
       {
-        "message": "amigo",
-        "classification": "cool"
+        "input": "amigo",
+        "output": "cool"
       },
       {
-        "message": "bom jogo",
-        "classification": "cool"
+        "input": "bom jogo",
+        "output": "cool"
       },
       {
-        "message": "como estão vocês?",
-        "classification": "cool"
+        "input": "como estão vocês?",
+        "output": "cool"
       },
       {
-        "message": "prazer, meu nome é",
-        "classification": "cool"
+        "input": "prazer, meu nome é",
+        "output": "cool"
       },
       {
-        "message": "estou jogando agora",
-        "classification": "cool"
+        "input": "estou jogando agora",
+        "output": "cool"
       },
       {
-        "message": "to sem nada pra fazer",
-        "classification": "cool"
+        "input": "to sem nada pra fazer",
+        "output": "cool"
       },
       {
-        "message": "universidade",
-        "classification": "cool"
+        "input": "universidade",
+        "output": "cool"
       },
       {
-        "message": "amigos",
-        "classification": "cool"
+        "input": "amigos",
+        "output": "cool"
       },
       {
-        "message": "teste",
-        "classification": "cool"
+        "input": "teste",
+        "output": "cool"
       },
       {
-        "message": "foda",
-        "classification": "offensive"
+        "input": "foda",
+        "output": "offensive"
       },
       {
-        "message": "fodido",
-        "classification": "offensive"
+        "input": "fodido",
+        "output": "offensive"
       },
       {
-        "message": "otaku",
-        "classification": "offensive"
+        "input": "otaku",
+        "output": "offensive"
       },
       {
-        "message": "haru",
-        "classification": "cool"
+        "input": "haru",
+        "output": "cool"
       }
     ]
 }
