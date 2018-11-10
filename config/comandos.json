@@ -22,5 +22,20 @@
    "ajuda": {
      "desc": "Envio de lista de comandos no privado.",
      "comando": "ajuda"
+   },
+
+   "guardar": {
+     "desc": "Guarda no banco uma história a pedido do usuário",
+     "comando": "guardar"
+   },
+
+   "ler": {
+     "desc" : "Ler as histórias em um array vindo do banco",
+     "comando": "ler"
+   },
+
+   "history": {
+     "desc": "c q sabe",
+     "comando": "history"
    }
 }

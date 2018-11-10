@@ -83,6 +83,11 @@ harubot.on('message', message => {
       }
 
     }
+
+    // if(message.content[0] === haru_config.prefix) {
+    //   return message.reply('A-as coisas não deveriam ser assim ! >.<');
+    // }
+
   })
 
   classifier.learn(message.content.toLowerCase(), isOffensive);

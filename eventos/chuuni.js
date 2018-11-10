@@ -1,11 +1,13 @@
 //Aqui deverá começar com uma mensagem junto da estrutura de escolha
-}
+
+
+
 function hisChuu() {
 
-  const hist = 'historia';
+  const hist = 'historia;
   const x    = 'x1';
 
-  message.channel.send('Beeeeeem chuunibyou')
+
 
   if(message.content === hist) {
     return hist;
@@ -31,12 +33,6 @@ function xisum() {
 
   hisChuu.x();
 
-  const ler;
-  const mandar;
-
-  if() {
-
-  }
 
 
 

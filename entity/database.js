@@ -10,7 +10,7 @@ class Database {
       if(err) console.log(err);
     });
   }
-
+  
   async get(key) {
     return await this.db.get(key, (err, data) => {
       if(err) console.log(err)
