@@ -18,6 +18,7 @@ spinner.succeed('Instância do banco pronta.')
 // database.regions -> usuarios
 spinner.start('Criando as subregiões do banco de dados LevelDB');
 database.createSubRegion('usuarios');
+database.createSubRegion('historias');
 spinner.succeed('Subregiões do banco criadas com sucesso.');
 
 database.addInRegion('usuarios')({ nome: 'teste' });

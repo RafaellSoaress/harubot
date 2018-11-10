@@ -95,6 +95,14 @@
       {
         "message": "fodido",
         "classification": "offensive"
+      },
+      {
+        "message": "otaku",
+        "classification": "offensive"
+      },
+      {
+        "message": "haru",
+        "classification": "cool"
       }
     ]
 }
