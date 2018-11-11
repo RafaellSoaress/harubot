@@ -17,11 +17,11 @@ if (fs.statSync(intel_path).size == 0) {
   spinner.start('Iniciando o treinamento do modelo de rede neural da Haru...\n'.yellow);
 
   haru_ia.train(ia_config.trainingMessages, {
-    iterations: 100,
+    iterations: 500,
     errorThresh: 0.005,
     log: (log) => console.info('\t' + log.green),
-    logPeriod: 10,
-    learningRate: 0.3,
+    logPeriod: 100,
+    learningRate: 0.1,
     momentum: 0.1,
     callback: null,
     callbackPeriod: 10,

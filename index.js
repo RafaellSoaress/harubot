@@ -61,36 +61,41 @@ harubot.on('guildMemberAdd', member => {
 
 harubot.on('message', message => {
 
-  const messageClassification = haru_ia.run(message.content.toLowerCase());
+  if(message.author.tag !== harubot.user.tag) {
 
-  console.log(messageClassification);
+    const messageClassification = haru_ia.run(message.content.toLowerCase());
 
-  if(messageClassification === "offensive") {
-    message.reply(utils.getRandomResponse(constants.respostas));
-  }
+    if(messageClassification === "offensive") {
+      message.reply(utils.getRandomResponse(constants.respostas));
+    }
 
-  utils.getListaDeComandos(comandos).forEach(comando => {
-    if(comando.getPrefix() === message.content) {
+    utils.getListaDeComandos(comandos).forEach(comando => {
+      if(comando.getPrefix() === message.content) {
 
-      /*
+        /*
         Busca pelo evento relacionado a mensagem
         através do nome passado como comando   ,
         caso exista, então executa a respectiva função
         passando como argumento, o objeto "mensagem"
         do próprio Discord.
-      */
+        */
 
-      if(eventos[comando]) {
-        return eventos[comando](message);
+        if(eventos[comando]) {
+          return eventos[comando](message);
+        }
+
+        return;
+
       }
 
-    }
+      // if(message.content[0] === haru_config.prefix) {
+        //   return message.reply('A-as coisas não deveriam ser assim ! >.<');
+        // }
 
-    // if(message.content[0] === haru_config.prefix) {
-    //   return message.reply('A-as coisas não deveriam ser assim ! >.<');
-    // }
+      })
+      
+  }
 
-  })
 
   // haru_ia.train([{ input: message.content.toLowerCase(), output: messageClassification }]);
   // fs.writeFileSync(path.resolve(path.join(__dirname, './ANN/bayes.json')), JSON.stringify(haru_ia.toJSON()));
