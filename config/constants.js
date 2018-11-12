@@ -14,7 +14,16 @@ module.exports = {
     "xirubilubulalem... agora você entende porque eu não gosto de palavrão né ?",
     "não precisa descer o nível...",
     "se você continuar assim, eu vou me afastar de você ! :(",
-    "ai não... por que... ? que morte..."
+    "ai não... por que... ? que morte...",
+    "por favor... pare... ;-;",
+    "aaaaaaaaaaaaaaaaa.... por que ? ;-;",
+    "eu acabei de lavar meu cabelo e venho para cá para ler isso... que feio",
+    "pare de falar palavrão aqui, bobalhão !",
+    "staaaaaahp ! >.<",
+    "apenas... por que isso... ?",
+    "pra quê falar palavrão se podemos falar sobre o amor !",
+    "você está bem ? pois parece que não...",
+    "depois de ler isso, eu sugiro que você vá ouvir Love Live !",
   ]
 
 };

@@ -33,11 +33,16 @@ module.exports = {
 
 
   x1: (message) => {
+    message.reply('a mim, poderes arbitrários foram me concedidos para assistir e ver quem dos dois nesse embate vencerá !');
 
-      // vamos
+
+
+
   },
 
-  chuuni: (message) => {
+  motivar: (message) => {
+
+
   }
 
 

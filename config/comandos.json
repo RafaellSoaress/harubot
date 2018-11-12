@@ -37,5 +37,10 @@
    "history": {
      "desc": "c q sabe",
      "comando": "history"
+   },
+
+   "x1":{
+     "desc": "inicio de uma épica batalha",
+     "comando": "x1"
    }
 }
